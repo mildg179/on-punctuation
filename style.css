@@ -12,18 +12,11 @@
 }
 body, html {
     position: relative;
-    width: 1440px;
-    height: 900px;
     background: #FFFFFF;
     font-family: 'Ovo';
     color: black;
 }
 h1 {
-    position: absolute;
-    width: 645px;
-    height: 277px;
-    left: 410px;
-    top: 552px;
     font-family: Ovo;
     font-style: normal;
     font-weight: normal;
@@ -33,11 +26,6 @@ h1 {
     color: #000000;
 }
 p {
-    position: absolute;
-    width: 645px;
-    height: 277px;
-    left: 410px;
-    top: 572px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -47,78 +35,70 @@ p {
     text-decoration-line: underline;
     color: #FF0000;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    background: #aaa;
+    align-items: center;
+    display: flex;
+    height: 186px;
+    justify-content: center;
+    width: 186px;
+}
 .circle1 {
-    position: absolute;
     width: 186px;
     height: 186px;
-    left: 120px;
-    top: 264px;
     background: #FFFFFF;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
 }
 .circle2 {
-    position: absolute;
     width: 186px;
     height: 186px;
-    left: 324px;
-    top: 264px;
     background: #FFF6F6;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
 }
 .circle3 {
-    position: absolute;
     width: 186px;
     height: 186px;
-    left: 528px;
-    top: 264px;
     background: #FFE3E3;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
 }
 .circle4 {
-    position: absolute;
     width: 186px;
     height: 186px;
-    left: 732px;
-    top: 264px;
     background: #FFC8C8;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 50%;
 }
 .circle5 {
-    position: absolute;
     width: 186px;
     height: 186px;
-    left: 936px;
-    top: 264px;
     background: #FF9090;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 50%;
 }
 .circle6 {
-    position: absolute;
     width: 186px;
     height: 186px;
-    left: 1140px;
-    top: 264px;
     background: #FF4B4B;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 50%;
 }
 h2 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 176px;
-    top: 164px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -130,11 +110,6 @@ h2 {
     color: #000000;
 }
 h3 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 362px;
-    top: 137px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -146,11 +121,6 @@ h3 {
     color: #000000;    
 }
 h4 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 597px;
-    top: 49px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -162,11 +132,6 @@ h4 {
     color: #000000;
 }
 h5 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 787px;
-    top: 28px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -178,11 +143,6 @@ h5 {
     color: #000000;
 }
 h6 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 1003px;
-    top: -98px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -194,11 +154,6 @@ h6 {
     color: #000000;
 }
 h7 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 1193px;
-    top: 237px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -208,4 +163,15 @@ h7 {
     align-items: center;
     text-align: center;
     color: #000000;
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    .flex-container {
+        flex-direction: column;
+        float: right;
+        transform: translateX(42px);
+    }
 }
