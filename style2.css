@@ -12,19 +12,63 @@
 }
 body, html {
     position: relative;
-    width: 1440px;
-    height: 900px;
     background: #FFFFFF;
     font-family: 'Ovo';
     color: black;
 }
+.flex-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.outer-container{
+    display: flex;  
+    flex-direction: row;
+}
+.flex-container2 {
+    font-display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 50px;
+    padding-right: 200px;
+    font-family: 'Ovo';
+    text-align: justify;
+    font-size: 24px;
+}
+.flex-container3 {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-end;
+    padding-right: 15px;
+} 
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: #FF0000;
+}
+a:active {
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
 h1 {
-    position: absolute;
-    width: 645px;
-    height: 277px;
-    left: 398px;
-    top: 63px;
-    font-family: Ovo;
+    font-family: 'Ovo';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -33,11 +77,6 @@ h1 {
     color: #000000;
 }
 p{
-    position: absolute;
-    width: 645px;
-    height: 277px;
-    left: 398px;
-    top: 88px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -49,83 +88,83 @@ p{
 }
 .redtext {
     color: #FF0000;
+    
+}
+.whitetext {
+    color: white;
 }
 .largetext {
     font-size: 36px;
     line-height: 40px;
 }
-.circle1 {
-    position: absolute;
+.wrap {
+    margin: 10px;
+}
+.container {
+    display: inline-block;
+    width: 100px;
+}
+.box {
+    border-radius: 50%;
+    height: 10px;
+    margin: 10px;
+    width: 10px;
+}
+.circle {
+    background: #aaa;
+    align-items: center;
+    display: flex;
     width: 100px;
     height: 100px;
-    left: 1331px;
-    top: 238px;
+    justify-content: center;
+}
+.wrap:hover .box {
+    transform: scale(1.25);
+  }
+.circle1 {
     background: #FFFFFF;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+    transition: 300ms;
 }
 .circle2 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 1389px;
-    top: 358px;
     background: #FFF6F6;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+    transition: 600ms;
 }
 .circle3 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 1389px;
-    top: 478px;
     background: #FFE3E3;;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+    transition: 900ms;
+
 }
 .circle4 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 1389px;
-    top: 597px;
     background: #FFC8C8;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+    transition: 1200ms;
 }
 .circle5 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 1389px;
-    top: 716px;
     background: #FF9090;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+    transition: 1500ms;
 }
 .circle6 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 1389px;
-    top: 836px;
     background: #FF4B4B;
     border: 2px solid #000000;
     border-radius: 50%;
     box-sizing: border-box;
+    transition: 1800ms;
 }
 h2 {
-    position: absolute;
-    width: 471px;
-    height: 162px;
-    left: 1145px;
-    top: 203px;
     font-family: Times;
     font-style: normal;
     font-weight: normal;
@@ -134,6 +173,22 @@ h2 {
     text-align: center;
     color: #000000;
 }
-h3 {
-    
+@media (max-width: 480px) {
+    html, body {
+        /* overflow-x: hidden; */
+    }
+    .largetext {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .flex-container2 {
+        font-display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding-left: 25px;
+        padding-right: 50px;
+        font-family: 'Ovo';
+        text-align: justify;
+        font-size: 12px;
+    }
 }
